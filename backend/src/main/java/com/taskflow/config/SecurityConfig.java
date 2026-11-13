@@ -78,7 +78,8 @@ public class SecurityConfig {
             configuration.setAllowedOrigins(origins);
             // Also allow localhost and any vercel preview deployments
             configuration.addAllowedOriginPattern("http://localhost:*");
-            configuration.addAllowedOriginPattern("https://*.vercel.app");
+	    configuration.addAllowedOriginPattern("http://127.0.0.1:*");
+	    configuration.addAllowedOriginPattern("https://*.vercel.app");
         }
 
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
